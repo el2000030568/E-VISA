@@ -1,0 +1,66 @@
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>electronic visa</title>
+<style type="text/css"> #h1{color: red; font-size: 20px;position:relative;top:20px;left:10px;} .border{ width: 1520px; height:70px; background-color:black; margin: 0; } .b1{ width:180px; height: 60px;  background-color:red;border:0px;border-radius:6px;position:relative;top:300px;left:700px;font-size:15px;color:white; } .b1:hover{ background-color:black;color:white; } .b2{ width:180px; height: 60px; background-color:red;border:0px;border-radius:6px;position:relative;top:300px;left:500px;font-size:15px;color:white; } .b2:hover{  background-color:black;color:red; } 
+.box1{
+width:700px;
+height:600px;
+background-color:white;
+box-shadow:1px 3px 4px black;
+margin-top:2%;
+margin-left:28%;
+font-family:'Trebuchet MS';
+}
+.i1{
+     width:200px;
+     height:30px;
+}
+.i5{
+       width:100px;
+       height:30px;
+       box-shadow:1px 3px 3px black;
+       position:relative;
+       left:320px;
+       top:-45px;
+}
+.i6{
+       width:180px;
+       height:100px;
+       box-shadow:1px 3px 3px black;
+       position:relative;
+       left:320px;
+       top:-65px;
+}
+.b5{
+     width:150px;
+     height:40px;
+     background-color:red;
+     border:none;
+     position:relative;
+       left:150px;
+       top:25px;
+       }
+       .b5:hover{
+        box-shadow:1px 3px 3px black;
+       }
+</style>
+</head>
+<body style="background-color: #F2F5F5;">
+<div class="border">
+<h1 id="h1"> Electronic visa </h1>
+</div>
+<div Class="box1">
+   <h2 style="text-align: center;padding:10px;">USER</h2>    
+   <h:form>
+      <h3 style="margin-left:180px; ">Status of payment : <h style="color:green"> #{admin.mstatus}  </h> </h3>
+      <h3 style="margin-left:180px; ">Holdername : <h style="color:blue"> #{admin.holdername}  </h> </h3>
+      <h4 style="position: relative;top:0px;left:250px;"> Status : </h4> <h:selectOneMenu value="#{admin.status}" styleClass="i5" ><f:selectItem  itemLabel="status" /> <f:selectItem itemValue="yes" itemLabel="yes" /> <f:selectItem itemValue="No" itemLabel="No" /></h:selectOneMenu>     
+      <h3 style="margin-left:160px; margin-top:10px;">comment to user :  </h3><h:inputText value="#{admin.comment}" styleClass="i6"  />
+      <h:commandButton action="#{admin.approved()}" value="approve" styleClass="b5" />
+      
+   </h:form>     
+   
+</div>
+</body>
+</html>

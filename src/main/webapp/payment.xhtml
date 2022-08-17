@@ -1,0 +1,48 @@
+<html xmlns:h="http://java.sun.com/jsf/html" xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+<title></title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
+ 
+<style type="text/css">
+     body{background-color: #EAE5E4;}
+          .border{ width: 1535px; height:70px; background-color:black; margin: 0;position:relative;top:-8px;left:-8px;border-bottom:solid green 70px;  }
+#h2{color: white; font-size: 10px;position:relative;top:-1px;left:15px;}
+ #h3{color: red; font-size: 20px;position:relative;top:20px;left:10px;font-weight:500;text-decoration:none;font-family:Trebuchet MS;} 
+   #box1{width: 550px;height:500px;background-color:white;position:relative;left:480px;top:50px;border-radius:5px;border-top:solid red 70px;box-shadow:5px 5px 15px grey;}       
+    .b1{width:300px;height:40px;background-color:white;color:black;border:0.5px solid grey;border-radius:4px;}
+    .b1:hover{background-color:red;color:white;transition:0.8s;}
+
+</style>
+</head>
+<body>
+     <div class="border" >
+  <a id="h3" > Payment</a>
+  
+           <h5 id="h2" >  E-visa </h5>
+           
+           <h3  style="background-color:green;color:white;font-size:25px;font-family:Trebuchet MS;margin:20px 20px;padding:20px;text-align:center;">PAYMENT</h3>
+  </div>
+      <h1> result : <h:outputLabel value="#{cus.res}"/> </h1>
+    <div id="box1">
+    <h4 style="position:relative;top:-80px;font-size:25px;color:white;font-family:Trebuchet MS;text-align:center;">   Esay pay  </h4>
+    <i class="fa fa-cc-visa" style="font-size:48px;color:red;position:relative;top:-100px;left:250px;" ></i>
+    <h2 style="text-align:center;position:relative;top:-120px;font-family:Trebuchet MS;">#{cus.headername}</h2>
+    <h:form>  
+                     <table>
+                                      <tr> <td style="position: relative;top:-130px;left:30px;"> <label style="font-weight: 900;">Enter 12 digits number :</label> <br/><i class="fa fa-user" style='font-size:15px;position:absolute;left:10px;padding-top:10px'></i>  <h:inputText  value="#{cus.accnumber}"  style="width:350px;height:40px;font-size:20px;background-color:white;color:blue;border:1px solid grey;box-shadow:3px 3px 3px grey;border-radius:2px;border-left:solid red 30px;" /> </td></tr>
+                                      <tr> <td style="position: relative;top:-130px;left:30px;"> <label style="font-weight: 900;">validity :</label> <br/> <h:inputText  value="#{cus.validity}"  style="width:100px;height:40px;font-size:20px;background-color:white;color:blue;border:1px solid grey;box-shadow:3px 3px 3px grey;border-radius:2px;" /> </td></tr>
+                                      <tr> <td style="position: relative;top:-193px;left:180px;"> <label style="font-weight: 900;">CVV :</label> <br/> <h:inputSecret  value="#{cus.cvv}"  style="width:100px;height:40px;font-size:20px;background-color:white;color:blue;border:1px solid grey;box-shadow:3px 3px 3px grey;border-radius:2px;" /> </td></tr>
+                                      <tr> <td style="position: relative;top:-180px;left:30px;"> <label style="font-weight: 900;">Account holder name:</label> <br/> <h:inputText  value="#{cus.holdername}"  style="width:350px;height:40px;font-size:20px;background-color:white;color:blue;border:1px solid grey;box-shadow:3px 3px 3px grey;border-radius:2px;" /> </td></tr>
+                                      <tr> <td style="position: relative;top:-176px;left:180px;"> <label style="font-weight: 900;padding-left:17px;">Prize :</label> <br/> <h:inputText  pt:placeholder="$#{cus.prize}" readonly="true" style="width:100px;height:40px;font-size:16px;background-color:white;color:blue;border:1px solid grey;box-shadow:3px 3px 3px grey;border-radius:2px;color:green;" /> </td></tr>
+                                      <tr> <td style="position: relative;top:-166px;left:80px;">  <h:commandButton action="#{cus.payment()}" value="Fly to pay" styleClass="b1" > <i class="fa fa-plane" style="font-size:24px;position:relative;left:-120px;top:5px;color:red;"></i> </h:commandButton>    </td></tr>
+                                           
+                  </table>
+      </h:form>
+    <p style="position: relative;top:-166px;left:8px;"> Note : As ur transcation be safe , please dont share ur otp or cvv number and screen  </p>
+    </div>
+  
+      
+</body>
+</html>

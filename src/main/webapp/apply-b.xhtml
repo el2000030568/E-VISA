@@ -1,0 +1,42 @@
+<html xmlns:h="http://java.sun.com/jsf/html" xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>Apply</title>
+<style type="text/css">
+body{background-color: #EAE5E4;}
+.border{ width: 1535px; height:70px; background-color:black; margin: 0;position:relative;top:-8px;left:-8px;  }
+#h2{color: white; font-size: 10px;position:relative;top:-1px;left:15px;}
+ #h3{color: red; font-size: 20px;position:relative;top:20px;left:10px;font-weight:500;text-decoration:none;font-family:Trebuchet MS;} 
+.i1{width:180px;height:30px;font-family:Trebuchet MS;} .i1:hover{border:none;box-shadow:1px 3px 5px red;background-color:red;} .i1:focus{border:none;box-shadow:1px 3px 5px red;background-color:white;}
+.i2{width:180px;height:30px;font-family:Trebuchet MS;background-color:red;color:black;border:none;}  .i2:hover{border:none;box-shadow:1px 3px 5px black;background-color:white;transition:1s;}
+
+</style>
+</head>
+<body>
+<div class="border" >  <a id="h3" href="Home.jsf"> Apply</a>  <h5 id="h2">  E-visa </h5> </div>
+<h2 style="text-align: center;font-family:Trebuchet MS;color:red;">Stamped Visa</h2>
+<h3>#{cus.res}</h3>
+
+<div style="width:600px;height:500px;background-color:white;position:relative;left:460px;box-shadow:1px 3px 5px grey;">
+<h:form>
+<table>
+<tr> <td style="position:relative;left:30px;top:40px;"> <label style="font-family:Trebuchet MS;">  Name:  </label> <h:inputText value="#{cus.ufname}" readonly="true" styleClass="i1" /> </td> 
+<td style="position:relative;left:30px;top:40px;"> <label style="font-family:Trebuchet MS;">  middle name:  </label> <h:inputText value="#{cus.umname}" readonly="true" styleClass="i1" /> </td>   </tr>
+<tr>    <td style="position:relative;left:150px;top:45px;"> <label style="font-family:Trebuchet MS;"> last Name:  </label> <h:inputText value="#{cus.ulname}" readonly="true" styleClass="i1" /> </td>  </tr>
+<tr>    <td style="position:relative;left:150px;top:60px;"> <label style="font-family:Trebuchet MS;"> Enter date: </label> <h:inputText value="#{cus.date}"  styleClass="i1"  a:placeholder="physically appear date"  /> </td>  </tr>
+<tr>    <td style="position:relative;left:240px;top:60px;"> <label style="font-family:Trebuchet MS;color:green;font-size:10px;"> manditory dd-mm-yyyy </label>  </td>  </tr>
+<tr>    <td style="position:relative;left:20px;top:60px;"> <label style="font-family:Trebuchet MS;color:red;"> Note* :-</label>  </td> <td style="position:absolute;left:85px;top:163px;"> <p> There are 3 types of visa are there plesae select on of those </p> <p style="margin-top:-3%;"> 1) Type A :- stay days upto 2 months cost $101.44 </p> <p style="margin-top:-3%;"> 2) Type C :- stay days 4 months cost $202.22 </p><p style="margin-top:-3%;"> 3) Type D :- stay days 6 months cost $303.33 </p> 
+        <p style="margin-top:-2%;color:red;margin-left:-7%;"> Once you appiled you cannot apiled for electronic vise you are allowed once </p>            </td> </tr>
+         
+            <tr>    <td style="position:relative;left:135px;top:150px;"> <label style="font-family:Trebuchet MS;"> Stay days:  </label> <h:inputText value="#{cus.days}"  styleClass="i1"  a:placeholder="no.of days"  /> </td>  </tr>
+             
+           <tr>  <td style="position: relative;top:160px;left:170px;"> <label style="font-family:Trebuchet MS;"> Type: </label> <h:selectOneMenu value="#{cus.type}" styleClass="i1" ><f:selectItem  itemLabel="type" /> <f:selectItem itemValue="A" itemLabel="A" /> <f:selectItem itemValue="C" itemLabel="C" />   <f:selectItem itemValue="D" itemLabel="D" />        </h:selectOneMenu>      </td></tr>
+           <tr>    <td style="position:relative;left:210px;top:170px;"> <h:commandButton action="#{cus.applyb()}" value="apply"  styleClass="i2"/> </td>  </tr>
+           
+
+</table>
+</h:form>
+</div>
+  
+</body>
+</html>

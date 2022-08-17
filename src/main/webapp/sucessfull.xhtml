@@ -1,0 +1,26 @@
+ <html  xmlns:h="http://java.sun.com/jsf/html">
+ <head>
+ <title>suceefully transcation</title>
+ <style type="text/css">
+ .border{ width: 1535px; height:70px; background-color:black; margin: 0;position:relative;top:-8px;left:-8px;  }
+#h2{color: white; font-size: 10px;position:relative;top:-1px;left:15px;}
+ #h3{color: red; font-size: 20px;position:relative;top:20px;left:10px;font-weight:500;text-decoration:none;font-family:Trebuchet MS;} 
+ #box1{width: 1450px;height:200px;background-color:#E5F51A;border-radius:10px;position:relative;top:250px;left:50px;}
+ </style>
+ </head>
+ <body style="background-color:green">
+  <div class="border" >
+  <a id="h3" href="#"> Sucessfull</a>
+           <h5 id="h2">  E-visa </h5>
+  </div>
+  #{cus.res}
+  <div id="box1">
+  <h1 style="text-align:center;">Successfully Transcation</h1>
+  <img src="cheked.png"   style=" margin-left:45%; margin-right: auto;  width: 10%;margin-top:-3%"  />
+  <h:form>
+  <h3  style=" margin-left:40%; margin-right: auto;  width: 10%;margin-top:-3%;color:blue;">check ur status :- </h3><h:commandButton action="#{cus.status()}" value="Status approved" style=" margin-left:49%; margin-right: auto;  width: 10%;margin-top:-2.9%;height:30px;background-color:red;color:white;border:none;border-radius:2px;box-shadow:1px 1px 1px black;" />
+  </h:form>
+  <h5  style=" margin-left:30%; margin-right: auto;margin-top:-1.7%;color:#F51ACA;">Note* : The status of ur e-visa is pending for some hrs,After verifed by Admin u will get the visa</h5>
+  </div>
+ </body>
+ </html>

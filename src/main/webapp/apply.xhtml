@@ -1,0 +1,76 @@
+<html xmlns:h="http://java.sun.com/jsf/html"  xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<head>
+<title> E-VISA  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+.border{ width: 1535px; height:70px; background-color:black; margin: 0;position:relative;top:-8px;left:-8px;  }
+#h2{color: white; font-size: 10px;position:relative;top:-1px;left:15px;}
+ #h3{color: red; font-size: 20px;position:relative;top:20px;left:10px;font-weight:500;text-decoration:none;font-family:Trebuchet MS;} 
+   .i1{width:180px;height:30px;font-size:15px;position:relative;top:-95px;left:150px;} .i1:hover{border-style: dashed;}
+   .i2{width:180px;height:30px;font-size:15px;position:relative;top:-168px;left:520px;} .i2:hover{border-style: dashed;}
+   .i3{width:210px;height:30px;font-size:15px;position:relative;top:-185px;left:130px;} .i3:hover{border-style: dashed;}
+    .i4{width:100px;height:30px;font-size:15px;position:relative;top:-185px;left:90px;} .i4:hover{border-style: dashed;}
+     .i5{width:100px;height:30px;font-size:15px;position:relative;top:-185px;left:90px;} 
+    .i6{width:210px;height:30px;font-size:15px;position:relative;top:-185px;left:100px;}
+     .i7{width:300px;height:30px;font-size:15px;position:relative;top:-185px;left:90px;border:1px solid gray;}
+     .i8{width:300px;height:30px;font-size:15px;position:relative;top:-205px;left:90px;border:1px solid gray;}
+     .i9{width:150px;height:40px;position:absolute;top:830px;left:710px;background-color:red;color:white;border:none; } .i9:hover{background-color:green; }
+</style>
+</head>
+<body>
+<div class="border" >
+  <a id="h3" href="Home.jsf"> User</a>
+           <h5 id="h2">  E-visa </h5>
+  </div>
+  
+  <h1> result : <h:outputLabel value="#{cus.res}"/> </h1>
+  <div style="width:1520px;height:800px;background-color:white;border:solid 1px grey;position:relative;left:8px;box-shadow: 1px 3px 5px black;">
+       <h1 style="text-align: center;font-family:Trebuchet MS;font-size:20px;box-shadow:1px 2px 3px red;">APPLY HERE</h1>
+       <h:form>
+ 
+       <TABLE>
+       <h2 style="position:relative;left:40px;color:green"> Personal Information</h2>
+       <tr>  <td> <h4 style="padding:30;position:relative;top:-20px;left:15px; "> FirstName : </h4><h:inputText  a:placeholder="#{cus.ufname}" readonly = "true" styleClass="i1" /> </td>    </tr> 
+       <tr>  <td> <h4 style="position: relative;top:-125px;left:400px;"> MiddleName : </h4><h:inputText  a:placeholder="#{cus.umname}" readonly = "true" styleClass="i2" /> </td>    </tr> 
+       <tr>  <td> <h4 style="position: relative;top:-140px;left:40px;"> LastName : </h4><h:inputText  a:placeholder="#{cus.ulname}" readonly = "true" styleClass="i3" /> </td>    </tr> 
+       <tr>  <td style="position: relative;top:-73px;left:330px;" > <h4 style="position: relative;top:-140px;left:40px;"> Age : </h4><h:inputText value="#{cus.age}"  type="integer"     a:placeholder="Enter Age" styleClass="i4" /> </td>    </tr> 
+       <tr>  <td style="position: relative;top:-146px;left:515px;"> <h4 style="position: relative;top:-140px;left:40px;"> sex: </h4> <h:selectOneMenu value="#{cus.sex}" styleClass="i5" ><f:selectItem  itemLabel="gender" /> <f:selectItem itemValue="male" itemLabel="male" /> <f:selectItem itemValue="fe-male" itemLabel="fe-male" />   <f:selectItem itemValue="others" itemLabel="others" />        </h:selectOneMenu>      </td></tr>
+       <tr>  <td style="position: relative;top:-165px;left:50px;" > <h4 style="position: relative;top:-140px;left:-15px;"> Fathers Name: </h4><h:inputText value="#{cus.fathername}"      a:placeholder="Enter Fathers name" styleClass="i6" /> </td>    </tr> 
+       <tr>  <td style="position: relative;top:-240px;left:390px;" > <h4 style="position: relative;top:-140px;left:-15px;"> mothers Name: </h4><h:inputText value="#{cus.mothername}"      a:placeholder="Enter mothers name" styleClass="i6" /> </td>    </tr> 
+        <div style="position:absolute;top:620px;">
+      <h4 style="position: relative;top:-360px;left:45px;">Date Of Birth :</h4>   <h:inputText  value = "#{cus.dateofbirth}" pt:placeholder="08-03-2003"   style="position:relative;top:-405px;left:150px;height:30px;" />
+          
+        
+          <h:outputLabel style="position: relative;top:-405px;left:160px;color:green" > mandotatory "dd-mm-yyyy" requirment </h:outputLabel>
+      <br/>
+     
+      </div>  
+       <tr>  <td style="position: relative;top:-200px;left:50px;" > <h4 style="position: relative;top:-140px;left:-20px;"> place of birth : </h4><h:inputText value="#{cus.placeofbirth}"       a:placeholder="Ex : vijayawada" styleClass="i6" /> </td>    </tr> 
+       <tr>  <td style="position: relative;top:-273px;left:390px;" > <h4 style="position: relative;top:-140px;left:-20px;"> country of birth : </h4><h:inputText value="#{cus.countryofplace}"       a:placeholder="Ex :india" styleClass="i6" /> </td>    </tr> 
+      <tr>  <td style="position: relative;top:-290px;left:105px;"> <h4 style="position: relative;top:-140px;left:-75px;"> Current marital status: </h4> <h:selectOneMenu value="#{cus.mstatus}" styleClass="i5" ><f:selectItem  itemLabel="status" /> <f:selectItem itemValue="married" itemLabel="married" /> <f:selectItem itemValue="unmarried" itemLabel="unmarried" />           </h:selectOneMenu>      </td></tr>
+         <h2 style="position: absolute;left:840px;top:40px;color:green;" > Additional Information on applicant`s passport </h2>
+     <tr>  <td style="position: relative;top:-630px;left:885px;"> <h4 style="position: relative;top:-140px;left:-45px;"> Type of Passport : </h4> <h:selectOneMenu value="#{cus.passporttype}" styleClass="i7" ><f:selectItem  itemLabel="type" /> <f:selectItem itemValue="National passport" itemLabel="National passport" /> <f:selectItem itemValue="Diplomatic passport" itemLabel="Diplomatic passport" /> <f:selectItem itemValue="service passport" itemLabel="service passport" /> <f:selectItem itemValue="Offical Passport" itemLabel="offical passport" />         </h:selectOneMenu>      </td></tr>
+                <tr>  <td style="position: relative;top:-655px;left:890px;" > <h4 style="position: relative;top:-140px;left:-45px;"> Passport Number: </h4><h:inputText value="#{cus.passportnumber}"      a:placeholder="Enter 6 digits passport number" styleClass="i7" /> </td>    </tr> 
+        <tr> <td  style="position: relative;top:-660px;left:885px;">   <h4 style="position: relative;top:-160px;left:15px;">Validity :</h4>   <h:inputText  value = "#{cus.validity}" pt:placeholder="08-03-2003"   styleClass="i8" />
+           </td></tr>         
+                <tr>  <td style="position: relative;top:-700px;left:900px;" > <h4 style="position: relative;top:-140px;left:-60px;"> Duration of stay Days: </h4><h:inputText value="#{cus.duration}"       a:placeholder="ex:120" styleClass="i6" /> </td>    </tr> 
+         <tr>  <td style="position: relative;top:-740px;left:520px;"> <h4 style="position: relative;top:-125px;left:320px;"> Number of entries requested:</h4><h:inputText value="one"  readonly = "true" styleClass="i2" /> </td>    </tr> 
+           <tr> <td> <hr style="width:95%;text-align:left;margin-left:0;position:relative;top:-840px;left:20px;background-color:grey;" /> </td></tr>     
+            <tr><td style="position:relative;top:-840px;left:650px;" > <h2> Note : type visa Select </h2>  </td></tr>  
+            <tr> <td  style="position:relative;top:-820px;left:20px;" > <h3> TYPE A : </h3> <p style="position:relative;top:-20px;">It is issued in the form of a stamp visa or printed in electronic format, which gives to the holder the right to enter and stay in the international area of an airport circulation until necessary for the next flight to the country of destination. The validity of this visa corresponds to the time period and flight ticket reservation the visa applicant foresees for the transiting. </p> </td></tr>
+           <tr> <td  style="position:relative;top:-820px;left:20px;" > <h3> TYPE C : </h3> <p style="position:relative;top:-20px;">It is issued in the form of a stamp visa or printed in electronic format, which gives to the holder the right to enter and stay in the international area of an airport circulation until necessary for the next flight to the country of destination. The validity of this visa corresponds to the time period and flight ticket reservation the visa applicant foresees for the transiting. </p> </td></tr>
+           <tr> <td  style="position:relative;top:-820px;left:20px;" > <h3> TYPE D : </h3> <p style="position:relative;top:-20px;">It is issued in the form of a stamp visa or printed in electronic format, which gives to the holder the right to enter and stay in the international area of an airport circulation until necessary for the next flight to the country of destination. The validity of this visa corresponds to the time period and flight ticket reservation the visa applicant foresees for the transiting. </p> </td></tr>
+           <tr>  <td style="position: relative;top:-680px;left:655px;"> <h4 style="position: relative;top:-140px;left:40px;"> TYPE: </h4> <h:selectOneMenu value="#{cus.type}" styleClass="i5" ><f:selectItem  itemLabel="type" /> <f:selectItem itemValue="A" itemLabel="A" /> <f:selectItem itemValue="C" itemLabel="C" />   <f:selectItem itemValue="D" itemLabel="D" />        </h:selectOneMenu>      </td></tr>
+                      
+        </TABLE> 
+        <h:commandButton action="#{cus.userapply()}" value="Sumbit"  styleClass="i9" />  
+       </h:form>
+  </div>
+  <br/>
+ 
+     
+        
+      
+</body>
+</html>
